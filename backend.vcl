@@ -1,3 +1,5 @@
+vcl 4.0;
+
 backend default {
         .host = "blackbird";
         .port = "6601";
