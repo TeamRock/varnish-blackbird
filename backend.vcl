@@ -2,7 +2,7 @@ vcl 4.0;
 
 backend default {
         .host = "blackbird";
-        .port = "6601";
+        .port = "80";
         .probe = {
                 .url = "/health-check";
                 .timeout = 90ms;
