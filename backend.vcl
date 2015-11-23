@@ -12,7 +12,9 @@ backend default {
         }
 }
 
-sub vcl_fetch {
-  set beresp.ttl = 180s;
+sub vcl_recv {
+  # dont cache foo.com or bar.com - optional www
+   if (req.http.host ~ "blackbird\.teamrock\.com") {
+     pass;
+   }
 }
-
